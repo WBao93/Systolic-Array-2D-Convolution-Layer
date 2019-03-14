@@ -1,0 +1,87 @@
+//INPUT DATA MEMORY FILE EXAMPLE (seperate file named data.hex)
+
+//Example (16x16 pixel) 256-byte image where each pixel's value 
+//is its numeric position from top left to bottom right of image.
+//This also represents a 8x32,32x8,4x64,64x4, etc. image as well
+//because the total number of pixels/bytes for those dimensions
+//are also 256. The instruction determines the dimensions, not
+//this raw data. The length of each line is 256 bits (32 bytes).
+//This is hex format.
+
+000102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F
+202122232425262728292A2B2C2D2E2F303132333435363738393A3B3C3D3E3F
+404142434445464748494A4B4C4D4E4F505152535455565758595A5B5C5D5E5F
+606162636465666768696A6B6C6D6E6F707172737475767778797A7B7C7D7E7F
+808182838485868788898A8B8C8D8E8F909192939495969798999A9B9C9D9E9F
+A0A1A2A3A4A5A6A7A8A9AAABACADAEAFB0B1B2B3B4B5B6B7B8B9BABBBCBDBEBF
+C0C1C2C3C4C5C6C7C8C9CACBCCCDCECFD0D1D2D3D4D5D6D7D8D9DADBDCDDDEDF
+E0E1E2E3E4E5E6E7E8E9EAEBECEDEEEFF0F1F2F3F4F5F6F7F8F9FAFBFCFDFEFF
+
+//Example (10x10 pixel) 100-byte image where each pixel's value 
+//is its numeric position from top left to bottom right of image.
+//Notice that the values end at 63 hex (99 decimal) and the rest
+//of the line is zero-padded.
+
+000102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F
+202122232425262728292A2B2C2D2E2F303132333435363738393A3B3C3D3E3F
+404142434445464748494A4B4C4D4E4F505152535455565758595A5B5C5D5E5F
+6061626300000000000000000000000000000000000000000000000000000000
+
+//Filters are in the same format. Below is an example of a 
+//(3x3 pixel) 9-byte filter where each pixel's value is its 
+//numeric position from top left to bottom right of filter.
+//Notice again that the rest of the line is zero-padded.
+
+0001020304050607080000000000000000000000000000000000000000000000
+
+//Here is two 3x3 filters
+
+0001020304050607080001020304050607080000000000000000000000000000
+
+//Here is five 3x3 filters
+
+0001020304050607080001020304050607080001020304050607080001020304
+0506070800010203040506070800000000000000000000000000000000000000
+
+//If we want five 3x3 filters and a 10x10 image, this is what 
+//the overall input file should look like. Notice the image data
+//follows filter data on the immediate next line.
+
+0001020304050607080001020304050607080001020304050607080001020304
+0506070800010203040506070800000000000000000000000000000000000000
+000102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F
+202122232425262728292A2B2C2D2E2F303132333435363738393A3B3C3D3E3F
+404142434445464748494A4B4C4D4E4F505152535455565758595A5B5C5D5E5F
+6061626300000000000000000000000000000000000000000000000000000000
+
+//INPUT INSTRUCTION MEMORY FILE EXAMPLE (seperate file named inst.hex)
+
+//The assembly instructions corresponding to the above example should be
+//the following. Note that the filter starting address of 0 tells us
+//that the filter data starts on line 0 of the data memory and the 
+//image starting address of 2 tells us that the image starts at line
+//2 of the data memory.
+
+LF 3,5,0 //3 = filter size, 5 = num filters, 0 = filter starting address
+LS 10,10 //10 = image height, 10 = image width
+LI 2     //2 = image starting address
+DC
+
+//IMPORTANT! When compiling to machine code, the constants in 
+//assembly code that correspond with filter size, num filters, image
+//height, and image width must be subtracted by 1 since we are
+//using n-1 format in machine code to represent them (i.e. a binary 
+//value of 4'b1111 converts to 15 in decimal but for our purposes, 
+//4'b1111 represents either a width, height, size, or num of 16.
+//This also means an instruction such as LS 0,0 or LF 0,0,0 will NOT
+//compile because 0-1 = -1, which means our unsigned binary values
+//cannot represent. This is fine because convolution with a 0x0 filter
+//or 0x0 image does not make sense. The minimum dimensions we can
+//represent is 1x1 filter, 1x1 image, and 1 # of filters, all
+//represented by 4'b0000 and NOT 4'b0001 in binary machine code.
+//The input instruction file for the above code should be (in hex):
+
+12400000 //LF 3,5,0
+20009009 //LS 10,10
+30000002 //LI 2
+40000000 //DC

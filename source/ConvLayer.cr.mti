@@ -1,0 +1,81 @@
+C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/controller.sv {1 {vlog -work work -sv -stats=none C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/controller.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module controller
+
+Top level modules:
+	controller
+
+} {} {}} C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/scratchpad.sv {1 {vlog -work work -sv -stats=none C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/scratchpad.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module scratchpad
+
+Top level modules:
+	scratchpad
+
+} {} {}} C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/hb_mem.sv {1 {vlog -work work -sv -stats=none C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/hb_mem.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module hb_mem
+
+Top level modules:
+	hb_mem
+
+} {} {}} C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/testbench.sv {1 {vlog -work work -sv -stats=none C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/testbench.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module test
+
+Top level modules:
+	test
+
+} {} {}} C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/inst_fifo.sv {1 {vlog -work work -sv -stats=none C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/inst_fifo.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module inst_fifo
+
+Top level modules:
+	inst_fifo
+
+} {} {}} C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/pixel_request.sv {1 {vlog -work work -sv -stats=none C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/pixel_request.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module pixel_request
+
+Top level modules:
+	pixel_request
+
+} {} {}} C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/inst_decoder.sv {1 {vlog -work work -sv -stats=none C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/inst_decoder.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module inst_decoder
+
+Top level modules:
+	inst_decoder
+
+} {} {}} C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/pe.sv {1 {vlog -work work -sv -stats=none C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/pe.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module pe
+
+Top level modules:
+	pe
+
+} {} {}} C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/sys_array.sv {1 {vlog -work work -sv -stats=none C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/sys_array.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module sys_array
+
+Top level modules:
+	sys_array
+
+} {} {}} C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/pixel_decoder.sv {1 {vlog -work work -sv -stats=none C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/pixel_decoder.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module pixel_decoder
+
+Top level modules:
+	pixel_decoder
+
+} {} {}} C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/conv_top.sv {1 {vlog -work work -sv -stats=none C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/conv_top.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module conv_top
+
+Top level modules:
+	conv_top
+
+} {} {}} C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/conv_top.svh {1 {vlog -work work -sv -stats=none C:/Users/wbao/OneDrive/Documents/Courses/CSE240D/FinalProject/source/conv_top.svh
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+
+} {} {}}
