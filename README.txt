@@ -20,7 +20,7 @@ Contents:
 Please refer to the Final Report pdf for all documentation. The ./source/
 folder contains all of the SystemVerilog source code and cycle-accurate 
 testbench as well as ModelSim project files. The ./model/ folder contains 
-the Python Assembly compiler (aka assembler) and the non-cycle accurate 
+the Python Assembly compiler (aka assembler) and the non-cycle-accurate 
 Python model/simulator which generates input and test vectors for the 
 testbench. The "Simulation Framework" section of the Final Report explains
 this folder structure and usage in more detail and will guide you through
