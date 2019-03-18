@@ -2,7 +2,7 @@
 #                                                                      #
 #       UCSD CSE 240D WI19: Accelerator Design for Deep Learning       #
 #                                                                      #
-#   A systolic array-based single convolution later in SystemVerilog   #
+#   A Systolic Array-based Single Convolution Layer in SystemVerilog   #
 #                   by William Bao and Dylan Vizcarra                  #
 #                                                                      #
 ########################################################################
