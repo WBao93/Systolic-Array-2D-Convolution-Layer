@@ -34,4 +34,6 @@ Dependencies:
 - Python 2.7 or 3.4+ with imageio and numpy. Note that this dependency is
   not required if you decide not to use our provided simulation framework
   and decide to manually generate your own input and test vectors for the 
-  testbench.
+  testbench. ./source/mem_doc.txt will tell you how to manually format 
+  input image and filter data as well as machine code. We highly recommend
+  using our provided Python-based simulation framework.
